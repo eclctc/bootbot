@@ -2,10 +2,9 @@
 def count_words(text):
     count = 0
     words = text.split()
-    for word in words:
-        count += 1
+    count = [word for word in words]
     
-    return count
+    return len(count)
 
 def count_characters(text):
     characters = {}
