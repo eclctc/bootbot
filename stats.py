@@ -1,3 +1,4 @@
+from collections import Counter
 
 def count_words(text):
     count = 0
@@ -16,3 +17,11 @@ def count_characters(text):
             characters[char] += 1
     
     return characters
+
+
+def sort_characters(characters):
+    char_data = [{"char": k, "num": v} for k, v in characters.items()]
+    sorted_data = sorted(char_data, key=lambda x: x["num"], reverse=True)
+
+    return sorted_data
+    
